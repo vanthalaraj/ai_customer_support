@@ -1,0 +1,16 @@
+{
+  "name": "customer-support-chatbot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-Based Customer Support Chatbot using React JS, Node.js, Express.js and Ollama Cloud API",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "server": "npm start --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
